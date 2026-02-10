@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bicycle Warehouse | Ride It</title>
+    <title>Kothari & Sons Warehouse | Ride It</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -133,6 +133,7 @@
         .hero {
             position: relative;
             height: 60vh;
+            overflow: hidden;
             background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1576435728678-35d0160181f7?q=80&w=1920&auto=format&fit=crop'),url('images/tiretracks-removebg.png');
             background-size: cover, 100px auto ; /* ; image2 is 100px wide, image1 covers the rest */
             background-position: center; /* Centers the image */
@@ -168,6 +169,7 @@
             justify-content: center;
             align-items: flex-end;
             width: 100%;
+            max-width: 100%;
         }
         .hero-column {
             display: flex;
@@ -349,8 +351,10 @@
         @media (max-width: 768px) {
             .nav-links { display: none; } /* Simplified for demo */
             .mobile-menu-btn { display: block; }
+            .hero { height: auto; min-height: 60vh; padding: 20px 10px; }
             .hero-content h1 { font-size: 3rem; }
-            .hero-columns { flex-direction: column; }
+            .hero-columns { flex-direction: column; gap: 20px; }
+            .hero-column img { max-width: 100% !important; width: 100% !important; height: auto; }
             .hero-buttons { flex-direction: column; }
             .collections-grid { grid-template-columns: 1fr; }
             .nav-wrapper { padding: 0 10px; }
@@ -365,7 +369,7 @@
 
     <header>
         <div class="container nav-wrapper">
-            <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            <!-- <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div> -->
             
             <a href="#" class="logo"><span>KOTHARI & SONS</span></a>
 
@@ -378,9 +382,9 @@
                     <li><a href="#">Clothing</a></li>
                     <li><a href="#" class="sale-link">Closeouts</a></li>
                 </ul>
-            </nav> -->
+            </nav> 
 
-            <!-- <div class="nav-icons">
+            <div class="nav-icons">
                 <a href="#"><i class="fas fa-search"></i></a>
                 <a href="#"><i class="fas fa-user"></i></a>
                 <a href="#"><i class="fas fa-shopping-cart"></i></a>
