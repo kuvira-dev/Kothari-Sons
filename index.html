@@ -177,6 +177,20 @@
             align-items: center;
             gap: 15px;
         }
+        .hero-column:first-child img {
+            animation: drift-left 3s ease-in-out infinite;
+        }
+        .hero-column:last-child img {
+            animation: drift-right 3s ease-in-out infinite;
+        }
+        @keyframes drift-left {
+            0%, 100% { transform: translateX(0) scale(1); }
+            50% { transform: translateX(-8px) scale(1.03); }
+        }
+        @keyframes drift-right {
+            0%, 100% { transform: translateX(0) scale(1); }
+            50% { transform: translateX(8px) scale(1.03); }
+        }
 
         .hero-image {
             display: flex;
